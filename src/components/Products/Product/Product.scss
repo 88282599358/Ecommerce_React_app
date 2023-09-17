@@ -1,0 +1,56 @@
+@import "../../../css-config/mixin.scss";
+
+.product-card {
+  width: calc(50% - 5px);
+  margin-bottom: 20px;
+  @include md {
+    width: calc(25% - 15px);
+  }
+  .thumbnail{
+    height: 180px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    @include md{
+        height: 300px;
+        width: 100%;
+    }
+    img{
+        transition: all ease 0.3s;
+        display: block;
+        width: 100%;
+
+    }
+  }
+
+  .prod-details{
+    .name{
+        font-style: 14px;
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @include md{
+            font-style: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    .price{
+        font-style: 18px;
+        @include md{
+            font-style: 24px;
+        }
+    }
+  }
+  &:hover{
+    .thumbnail{
+        img{
+            transform: scale(1.2);
+        }
+    }
+  }
+}
